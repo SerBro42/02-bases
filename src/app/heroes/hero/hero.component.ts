@@ -29,5 +29,12 @@ export class HeroComponent {
   resetForm():void {
     this.name = 'Ironman';
     this.age = 45;
+
+    // Sólo cambia el primer elemento h1 que encuentra en la página
+    //document.querySelector('h1')!.innerHTML = '<h1>Desde Angular</h1>';
+    // Cambia todos los elementos h1 que encuentre en la página
+    // document.querySelectorAll('h1').forEach( element => {
+    //   element.innerHTML = '<h1>Desde Angular</h1>';
+    // });
   }
 }
