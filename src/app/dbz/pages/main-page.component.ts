@@ -8,6 +8,7 @@ import { Character } from '../interfaces/character.interface';
 
 export class MainPageComponent {
 
+  //Esta lista de personajes será exportada hacia el componente hijo (list.component.ts)
   public characters: Character[] = [{
     name: 'Krillin',
     power: 1000
