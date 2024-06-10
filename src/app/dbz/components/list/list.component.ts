@@ -10,7 +10,7 @@ export class ListComponent {
 
   // Output similar al de add-character.component.ts
   @Output()
-  public onDeleteId: EventEmitter<number> = new EventEmitter();
+  public onDeleteId: EventEmitter<string> = new EventEmitter();
 
   // Aquí vamos a recibir información del componente padre (main-page.component)
   @Input()
@@ -20,11 +20,11 @@ export class ListComponent {
     power: 10
   }];
 
-  onDeleteCharacter(index: number):void {
+  onDeleteCharacter(id: string):void {
     // Capta y emite el index del personaje que queremos eliminar
-    console.log(index);
+    console.log(id);
 
-    this.onDeleteId.emit( index );
+    this.onDeleteId.emit( id );
 
   }
 

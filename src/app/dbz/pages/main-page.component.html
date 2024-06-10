@@ -7,7 +7,7 @@
      para que éste lo importe -->
      <!-- Ahora que la lista y sus funciones están en el servicio en vez de este componente,
       hay que importarlos debidamente mediante dbzService.loquesea -->
-    <dbz-list [characterList]="dbzService.characters" (onDeleteId)="dbzService.onDeleteCharacter($event)"></dbz-list>
+    <dbz-list [characterList]="dbzService.characters" (onDeleteId)="dbzService.deleteCharacterById($event)"></dbz-list>
   </div>
 
   <div class="col">
