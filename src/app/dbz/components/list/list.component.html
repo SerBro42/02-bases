@@ -25,6 +25,8 @@
       <span>{{ character.power }}</span>
     </div>
 
+    <!-- Para que sea legal emitir este evento (string vs string | Undefined), fue necesario
+     ponerle el non-null assertion operatior a character.id -->
     <button class="btn btn-danger" (click)="onDeleteCharacter(character.id!)">X</button>
 
     <!-- <span> Es el primero: {{ isFirst }}</span> -->
