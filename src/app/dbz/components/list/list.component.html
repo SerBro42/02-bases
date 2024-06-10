@@ -2,6 +2,8 @@
 <ul class="list-group">
   <!-- "index" ya está definido en el ngFor por defecto, nosotros tan sólo lo extraemos para
    asignárselo a nuestra variable "i". Lo mismo pasa con "first", "last", "even" y "odd" -->
+  <!-- ngClass añade clases de CSS de manera condicional. Las condiciones estaban previamente
+   declaradas en el *ngFor -->
   <li *ngFor="
     let character of characterList;
     let i = index;
@@ -10,7 +12,11 @@
     let isEven = even;
     let isOdd = odd;
     "
-    class="list-group-item">
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-dark' : isLast,
+      'list-group-item-primary' : isEven
+      }">
     <span class="text-primary"> {{ i+1 }}. </span>
     <span>{{ character.name }} - </span>
     <strong>Power: </strong>
