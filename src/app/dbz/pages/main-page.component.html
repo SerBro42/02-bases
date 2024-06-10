@@ -5,7 +5,8 @@
   <div class="col">
     <!-- Aquí vamos a enviar la información al componente hijo (list.component.ts)
      para que éste lo importe -->
-    <dbz-list [characterList]="characters"></dbz-list>
+     <!-- onDeleteId -->
+    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></dbz-list>
   </div>
 
   <div class="col">
