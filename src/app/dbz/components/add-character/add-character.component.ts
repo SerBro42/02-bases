@@ -17,13 +17,15 @@ export class AddCharacterComponent {
   };
 
   emitCharacter(): void {
-    console.log(this.character);
+
+    // Para crear un breakpoint en Angular, usar la siguiente línea:
+    // debugger;
+
     if (this.character.name.length === 0) return;
 
     this.onNewCharacter.emit(this.character);
 
-    this.character.name = '';
-    this.character.power = 0;
+    this.character = { name: '', power: 0 };
   }
 
 }
