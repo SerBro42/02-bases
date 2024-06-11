@@ -5,12 +5,17 @@
   <div class="col">
     <!-- Aquí vamos a enviar la información al componente hijo (list.component.ts)
      para que éste lo importe -->
-     <!-- Ahora que la lista y sus funciones están en el servicio en vez de este componente,
-      hay que importarlos debidamente mediante dbzService.loquesea -->
-    <dbz-list [characterList]="dbzService.characters" (onDeleteId)="dbzService.deleteCharacterById($event)"></dbz-list>
+    <!-- Ahora que la lista y sus funciones están en el servicio en vez de este componente,
+     hay que importarlos debidamente mediante dbzService.loquesea -->
+    <!-- Desde que el servicio pasó a ser privado, la llamada directa a sus funciones desde
+     HTML ya no funciona. Hubo que crear esta función en main-page.component.ts que a su vez
+     llama a los métodos del servicio -->
+    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></dbz-list>
   </div>
 
   <div class="col">
-    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)" ></dbz-add-character>
+    <!-- Igual que con el onDeleteCharacter, desde que el servicio pasó a ser privado, hubo que
+     crear esta función dentro de este componente para llamar a los métodos privados -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
   </div>
 </div>

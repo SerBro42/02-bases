@@ -27,7 +27,8 @@ export class DbzService {
     power: 7500
   }];
 
-  onNewCharacter( character: Character ):void {
+  /* Cambio de nombre de la función para mayor claridad */
+  addCharacter( character: Character ):void {
     // Al crear un nuevo personaje, cogemos el objeto character que nos pasan y le añadimos el
     // atributo id, el cual será generado mediante la llamada uuid(). El resto de atributos del
     // character son los mismos (de allí que sea ...character).
