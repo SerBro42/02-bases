@@ -20,9 +20,10 @@ export class ListComponent {
     power: 10
   }];
 
-  onDeleteCharacter(id: string):void {
+  onDeleteCharacter(id?: string):void {
     // Capta y emite el index del personaje que queremos eliminar
     console.log(id);
+    if ( !id ) return;
 
     this.onDeleteId.emit( id );
 

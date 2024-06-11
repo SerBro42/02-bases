@@ -27,7 +27,9 @@
 
     <!-- Para que sea legal emitir este evento (string vs string | Undefined), fue necesario
      ponerle el non-null assertion operatior a character.id -->
-    <button class="btn btn-danger" (click)="onDeleteCharacter(character.id!)">X</button>
+    <!-- Como alternativa del non-null assertion, podemos poner id? en la definición de
+     onDeleteCharacter -->
+    <button class="btn btn-danger" (click)="onDeleteCharacter(character.id)">X</button>
 
     <!-- <span> Es el primero: {{ isFirst }}</span> -->
 
